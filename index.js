@@ -57,3 +57,10 @@ function stringPalChecker(str) {
 }
 stringPalChecker("poop");
 stringPalChecker("loop");
+
+// 8. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+function stringAlphaBeticalOrder(str) {
+  let ans = str.split("").sort().join("");
+  console.log(ans);
+}
+stringAlphaBeticalOrder("apple");
