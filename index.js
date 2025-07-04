@@ -87,3 +87,14 @@ function occ(str) {
   return occurences;
 }
 console.log(occ("apple"));
+
+// 11. Loop an array and add all members of it.
+// NOTE: Equation: sum = sum + something
+function addNumbers(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+console.log(addNumbers([1, 2, 3, 4, 5]));
