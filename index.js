@@ -110,3 +110,42 @@ function AddNumbersOnly(arr) {
   return sum;
 }
 console.log(AddNumbersOnly([1, "whoami", 123, 23, "hi", 3]));
+
+// 13. Loop an array of objects and remove all objects which don't have gender's value male
+function removeGenderValue(arr) {
+  const newArr = arr.filter(function (elem) {
+    return elem.gender === "male";
+  });
+  return console.log(newArr);
+}
+removeGenderValue([
+  { name: "harsh", gender: "male" },
+  { name: "harshita", gender: "female" },
+  { name: "abcd", gender: "nonspecified" },
+  { name: "harshi", gender: "female" },
+  { name: "avinya", gender: "female" },
+]);
+
+// 2nd-way
+let arr = [
+  { name: "harsh", gender: "male" },
+  { name: "harshita", gender: "female" },
+  { name: "abcd", gender: "nonspecified" },
+  { name: "harshi", gender: "female" },
+  { name: "avinya", gender: "female" },
+];
+
+let count = 0;
+arr.forEach(function (elem) {
+  if (elem.gender !== "male") {
+    count++;
+  }
+});
+
+for (let i = 1; i <= count; i++) {
+  for (let j = 0; i < arr.length; j++) {
+    if (arr[j].gender !== "male") {
+      arr.splice(j, 1);
+    }
+  }
+}
