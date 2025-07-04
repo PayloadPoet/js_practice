@@ -184,3 +184,17 @@ function retrieve(arr, n = 1) {
   }
 }
 retrieve([1, 2, 3, 4, 5], 3);
+
+// 17. Write a javascript program to find the most frequent item of an array.
+function getFrequentItem(arr) {
+  let freq = {};
+  arr.forEach(function (elem) {
+    if (freq.hasOwnProperty(elem)) freq[elem]++;
+    else freq[elem] = 1;
+  });
+  const ans = Object.keys(freq).reduce(function (acc, num) {
+    return freq[acc] > freq[num] ? acc : num;
+  });
+  console.log(ans);
+}
+getFrequentItem([1, 2, 3, 3, 3, 3, 2, 2]);
