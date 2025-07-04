@@ -36,3 +36,16 @@ function duplicate(arr) {
   console.log(arr.concat(arr));
 }
 duplicate([1, 2, 3, 4, 5]);
+
+// 6. Write a JavaScript function that reverse a number.
+function reverseNumber(num) {
+  // easy way: console.log(Number(num.toString().split("").reverse().join("")));
+  let rev = 0;
+  while (num > 0) {
+    let rem = num % 10;
+    rev = rev * 10 + rem;
+    num = Math.floor(num / 10);
+  }
+  console.log(rev);
+}
+reverseNumber(12);
