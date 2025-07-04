@@ -198,3 +198,19 @@ function getFrequentItem(arr) {
   console.log(ans);
 }
 getFrequentItem([1, 2, 3, 3, 3, 3, 2, 2]);
+
+// 18. Write a function to shuffle an Array.
+function shuffleArray(arr) {
+  let totalShuffleArea = arr.length;
+
+  while (totalShuffleArea > 0) {
+    totalShuffleArea--;
+    let indexToBeExchanged = Math.floor(Math.random() * totalShuffleArea);
+    let temp = arr[totalShuffleArea];
+    arr[totalShuffleArea] = arr[indexToBeExchanged];
+    arr[indexToBeExchanged] = temp;
+  }
+
+  return arr;
+}
+shuffleArray([1, 2, 3, 4, 5, 6, 7]);
