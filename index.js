@@ -49,3 +49,11 @@ function reverseNumber(num) {
   console.log(rev);
 }
 reverseNumber(12);
+
+// 7. Write a JavaScript function that checks number weather a passed string is palindrome or not.
+function stringPalChecker(str) {
+  let reverseStr = str.split("").reverse().join("");
+  reverseStr === str ? console.log(true) : console.log(false);
+}
+stringPalChecker("poop");
+stringPalChecker("loop");
