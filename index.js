@@ -21,3 +21,18 @@ console.log(arr);
 
 // 4. How would you check if a number is an integer ?
 let a = 12;
+if (a % 1 === 0) {
+  console.log("Integer");
+} else {
+  console.log("not !");
+}
+
+// we can also use this method
+Number.isInteger(10);
+
+// 5. Make this work :
+// duplicate ([1, 2, 3, 4, 5]); // [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+function duplicate(arr) {
+  console.log(arr.concat(arr));
+}
+duplicate([1, 2, 3, 4, 5]);
