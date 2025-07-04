@@ -98,3 +98,15 @@ function addNumbers(arr) {
   return sum;
 }
 console.log(addNumbers([1, 2, 3, 4, 5]));
+
+// 12. In an array of numbers and strings, only add those members which are not strings.
+function AddNumbersOnly(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+console.log(AddNumbersOnly([1, "whoami", 123, 23, "hi", 3]));
