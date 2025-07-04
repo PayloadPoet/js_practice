@@ -149,3 +149,26 @@ for (let i = 1; i <= count; i++) {
     }
   }
 }
+
+// 14. Write a javascript function to clone an array
+function cloneArray(arr) {
+  return [...arr];
+}
+console.log(cloneArray([1, 2, 3, 4, 5]));
+
+// 2-way
+function clonedArray(arr) {
+  let newArr = [];
+  arr.forEach(function (elem) {
+    newArr.push(elem);
+  });
+  return newArr;
+}
+console.log(clonedArray([1, 2, 3, 4, "hi"]));
+
+// 15. Write a javascript function which accepts an argument and tells its type.
+function typeTeller(arg) {
+  return typeof arg;
+}
+console.log(typeTeller([]));
+console.log(typeTeller({}));
