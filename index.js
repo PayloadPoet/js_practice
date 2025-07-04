@@ -64,3 +64,12 @@ function stringAlphaBeticalOrder(str) {
   console.log(ans);
 }
 stringAlphaBeticalOrder("apple");
+
+// 9. Write a javascript function that accepts a string as a parameter and converts the first letter of each word of the string in uppercase.
+function capitalizeFirstLetter(str) {
+  const capitalizeWord = str.split(" ").map((word) => {
+    return word[0].toUpperCase() + word.substring(1);
+  });
+  console.log(capitalizeWord.join(" "));
+}
+capitalizeFirstLetter("This is my way to doing things.");
